@@ -12,10 +12,11 @@ function onGeoOk(position) {
       const city = document.querySelector("#weather span:last-child");
       const name = data.name;
 
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      weather.innerText = `${data.weather[0].main} ${data.main.temp}°C`;
       city.innerText = name;
     });
 }
+
 function onGeoError() {
   alert("Can't find you. No weather for you.");
 }
